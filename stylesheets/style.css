@@ -1,0 +1,32 @@
+@import url("reset.css");
+/* read this about this box-sizing thingy 
+https://css-tricks.com/box-sizing/*/
+* {
+  box-sizing: border-box; }
+
+body {
+  background-color: grey; }
+
+.getMoviesButton {
+  color: black;
+  cursor: pointer; }
+
+.getSingleMovieButton {
+  color: orange;
+  cursor: pointer; }
+
+.movies-placeholder {
+  display: flex;
+  flex-wrap: wrap;
+  border: 2px dashed red;
+  justify-content: center; }
+
+.single-movie-container {
+  flex-direction: column;
+  border: 2px dashed orange;
+  margin-left: calc(10px + 2vw);
+  margin-right: calc(10px + 2vw);
+  margin-top: calc(10px + 2vh);
+  margin-bottom: calc(10px + 2vh); }
+
+/*# sourceMappingURL=style.css.map */

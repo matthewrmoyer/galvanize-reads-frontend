@@ -1,0 +1,23 @@
+@import url("reset.css");
+/* read this about this box-sizing thingy 
+https://css-tricks.com/box-sizing/*/
+* {
+  box-sizing: border-box; }
+
+body {
+  background-color: grey; }
+
+.getMoviesButton {
+  color: black;
+  cursor: pointer; }
+
+.getSingleMovieButton {
+  color: orange;
+  cursor: pointer; }
+
+.single-movie-container {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 20px; }
+
+/*# sourceMappingURL=stlye.css.map */
