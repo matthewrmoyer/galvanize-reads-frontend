@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Books</title>
+		<link href="https://fonts.googleapis.com/css?family=Libre+Baskerville" rel="stylesheet">
+		<script src="https://code.jquery.com/jquery-3.1.1.min.js" integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8=" crossorigin="anonymous"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/2.0.0/handlebars.js"></script>
+		<link rel="stylesheet" type="text/css" href="./stylesheets/bootstrap/css/bootstrap-theme.css">
+		<link rel="stylesheet" type="text/css" href="./stylesheets/bootstrap/css/bootstrap.css">
+		<script src="https://use.fontawesome.com/57a2949668.js"></script>
+		<link rel="stylesheet" type="text/css" href="./stylesheets/style.css">
+		<script src ="./scripts/index.js"></script>
+		<meta name="viewport" content="width=device-width, initial-scale=.75">
+	</head>
+	<body>
+		<nav class='top-nav'>
+			<ul>
+				<li><a href="index.html">LOGO</a></li>
+				
+			</ul>
+		</nav>
+		<main>
+		<div class = 'get-books-button'>GetBooks</div>
+		<article class = "books-article">
+			<script id="book-template" type="text/x-handlebars-template">
+			<div class = "single-book-container col-lg-2 col-md-3 col-sm-5 col-xs-10">
+					<div class="title-container">
+											<h2>{{title}}</h2>
+					</div>
+					<div class="genre-container">
+											<p>{{genre}}</p>
+					</div>
+					<div class="description-container">
+											<p>{{description}}</p>
+					</div>
+				</div>
+				
+			</script>
+			
+			<div class = 'books-placeholder'></div>
+		</article>
+		</main>
+		<footer>
+		</footer>
+	</body>
+</html>
