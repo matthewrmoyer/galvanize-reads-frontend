@@ -26,15 +26,16 @@
 
 		<article class = "books-article">
 			<script id="book-template" type="text/x-handlebars-template">
-			<div class = "single-book-container col-lg-2 col-md-3 col-sm-5 col-xs-10 data-book-id={{id}} ">
+			<div class = "single-book-container col-xs-10 data-book-id={{id}} ">
 					<div class="title-container">
 											<h2 data-book-id={{id}}>{{title}}</h2>
 					</div>
 					<div class="author-container">
-						{{#with author}}
-											<span data-book-id={{id}}>{{first_name}}</span>
-											<span data-book-id={{id}}>{{last_name}}</span>
-						{{/with}}
+						{{#each authors}}
+							<div class = "author-name-container">
+								<a href="./single-author.html?id={{author_id}}">{{first_name}} {{last_name}}</a>
+							</div>
+						{{/each}}
 					</div>
 					<div class="genre-container">
 											<p data-book-id={{id}}>{{genre}}</p>
@@ -47,7 +48,11 @@
 											<a href="./single-book.html?id={{id}}">Edit</a>
 											<a href="./single-book.html?id={{id}}">Remove</a>
 					</div>
+				<br>
+				<br>
+				<br>
 				</div>
+
 				
 			</script>
 			
