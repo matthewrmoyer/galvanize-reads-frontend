@@ -30,6 +30,12 @@
 					<div class="title-container">
 											<h2 data-book-id={{id}}>{{title}}</h2>
 					</div>
+					<div class="author-container">
+						{{#with author}}
+											<span data-book-id={{id}}>{{first_name}}</span>
+											<span data-book-id={{id}}>{{last_name}}</span>
+						{{/with}}
+					</div>
 					<div class="genre-container">
 											<p data-book-id={{id}}>{{genre}}</p>
 					</div>
