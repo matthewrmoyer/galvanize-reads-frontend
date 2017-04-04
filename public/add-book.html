@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 	<head>
-		<title>Authors</title>
+		<title>Add a Book</title>
 		<link href="https://fonts.googleapis.com/css?family=Libre+Baskerville" rel="stylesheet">
 		<script src="https://code.jquery.com/jquery-3.1.1.min.js" integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8=" crossorigin="anonymous"></script>
 		<script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/2.0.0/handlebars.js"></script>
@@ -9,46 +9,25 @@
 		<link rel="stylesheet" type="text/css" href="./stylesheets/bootstrap/css/bootstrap.css">
 		<script src="https://use.fontawesome.com/57a2949668.js"></script>
 		<link rel="stylesheet" type="text/css" href="./stylesheets/style.css">
-		<script src ="./scripts/authors.js"></script>
+		<script src ="./scripts/add-book.js"></script>
 		<meta name="viewport" content="width=device-width, initial-scale=.75">
 	</head>
 	<body>
 		<nav class='top-nav'>
 			<ul>
 				<li><a href="index.html">LOGO</a></li>
-				<a href="./books.html">Books</a>
-				<a href="./add-author.html">Add Author</a>
-
-
+				<li><a href="./authors.html">Authors</a></li>
+				<li><a href="./books.html">Books</a></li>
 				
 			</ul>
 		</nav>
 		<main>
-		<div class = 'get-authors-button'>GetAuthors</div>
-		<article class = "authors-article">
-			<script id="author-template" type="text/x-handlebars-template">
-			<div class = "single-book-container col-lg-2 col-md-3 col-sm-5 col-xs-10">
-					<a href="./single-author.html?id={{id}}">View Author</a>
-					<div class="first-name-container">
-											<h2>{{first_name}}</h2>
-					</div>
-					<div class="last-name-container">
-											<h2>{{last_name}}</h2>
-					</div>
-					<div class="biography-container">
-											<h2>{{biography}}</h2>
-					</div>
-					
-
-					<div class="author-edit-remove-button-container">
-											<button>Edit</button>
-											<button>Remove</button>
-					</div>
-				</div>
-				
-			</script>
-			
-			<div class = 'authors-placeholder'></div>
+		<article class = "add-book-form-container">
+			<input class = "col-xs-12 single-book-form-title-input" type="text" name="title" placeholder="Title">
+			<input class = "col-xs-12 single-book-form-genre-input" type="text" name="genre" placeholder="Genre">
+			<textarea class = "col-xs-12 single-book-form-description-input" placeholder="Description"></textarea>
+			<input class = "col-xs-12 single-book-form-cover-input" type="text" name="cover" placeholder="Cover Url">
+			<button class ="add-book-form-submit">Add Book</button>	
 		</article>
 		</main>
 		<footer>

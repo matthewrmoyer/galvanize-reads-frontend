@@ -9,21 +9,17 @@
 		<link rel="stylesheet" type="text/css" href="./stylesheets/bootstrap/css/bootstrap.css">
 		<script src="https://use.fontawesome.com/57a2949668.js"></script>
 		<link rel="stylesheet" type="text/css" href="./stylesheets/style.css">
-		<script src ="./scripts/books.js"></script>
+		<script src ="./scripts/single-book.js"></script>
 		<meta name="viewport" content="width=device-width, initial-scale=.75">
 	</head>
 	<body>
 		<nav class='top-nav'>
 			<ul>
 				<li><a href="index.html">LOGO</a></li>
-				
 			</ul>
 		</nav>
 		<main>
 		<div class = 'get-books-button'>GetBooks</div>
-		<a href="./authors.html">Authors</a>
-		<a href="./add-book.html">Add Book</a>
-
 		<article class = "books-article">
 			<script id="book-template" type="text/x-handlebars-template">
 			<div class = "single-book-container col-lg-2 col-md-3 col-sm-5 col-xs-10 data-book-id={{id}} ">
@@ -38,10 +34,20 @@
 					</div>
 
 					<div class="book-edit-remove-button-container">
-											<a href="./single-book.html?id={{id}}">Edit</a>
-											<a href="./single-book.html?id={{id}}">Remove</a>
+											<button class = "single-book-page-edit-button"data-book-id={{id}}>Edit</button>
+											<button class = "single-book-page-remove-button"data-book-id={{id}}>Remove</button>
+					</div>
+
+
+				<div class = "single-book-form-container">
+					<input class = "col-xs-12 single-book-form-title-input" type="text" name="title" value="{{title}}">
+					<input class = "col-xs-12 single-book-form-genre-input" type="text" name="genre" value="{{genre}}">
+					<textarea class = "col-xs-12 single-book-form-description-input">{{description}}</textarea>
+					<input class = "col-xs-12 single-book-form-cover-input" type="text" name="cover" value="{{cover}}">
+					<button class ="single-book-form-submit">Sumbit Edit</button>				
 					</div>
 				</div>
+
 				
 			</script>
 			

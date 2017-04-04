@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 	<head>
-		<title>Authors</title>
+		<title>Author</title>
 		<link href="https://fonts.googleapis.com/css?family=Libre+Baskerville" rel="stylesheet">
 		<script src="https://code.jquery.com/jquery-3.1.1.min.js" integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8=" crossorigin="anonymous"></script>
 		<script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/2.0.0/handlebars.js"></script>
@@ -9,42 +9,57 @@
 		<link rel="stylesheet" type="text/css" href="./stylesheets/bootstrap/css/bootstrap.css">
 		<script src="https://use.fontawesome.com/57a2949668.js"></script>
 		<link rel="stylesheet" type="text/css" href="./stylesheets/style.css">
-		<script src ="./scripts/authors.js"></script>
+		<script src ="./scripts/single-author.js"></script>
 		<meta name="viewport" content="width=device-width, initial-scale=.75">
 	</head>
 	<body>
 		<nav class='top-nav'>
 			<ul>
 				<li><a href="index.html">LOGO</a></li>
-				<a href="./books.html">Books</a>
-				<a href="./add-author.html">Add Author</a>
+				<li><a href="books.html">Books</a></li>
+				<li><a href="authors.html">Authors</a></li>
 
-
-				
 			</ul>
 		</nav>
 		<main>
-		<div class = 'get-authors-button'>GetAuthors</div>
 		<article class = "authors-article">
 			<script id="author-template" type="text/x-handlebars-template">
-			<div class = "single-book-container col-lg-2 col-md-3 col-sm-5 col-xs-10">
-					<a href="./single-author.html?id={{id}}">View Author</a>
+			<div class = "single-author-container col-lg-2 col-md-3 col-sm-5 col-xs-10 data-book-id={{id}} ">
 					<div class="first-name-container">
-											<h2>{{first_name}}</h2>
+											<h2 data-book-id={{id}}>{{first_name}}</h2>
 					</div>
 					<div class="last-name-container">
-											<h2>{{last_name}}</h2>
+											<h2 data-book-id={{id}}>{{last_name}}</h2>
 					</div>
+
+					<div class="portrait-container">
+											<h2 data-book-id={{id}}>{{portrait}}</h2>
+					</div>
+
 					<div class="biography-container">
-											<h2>{{biography}}</h2>
+											<h2 data-book-id={{id}}>{{biography}}</h2>
 					</div>
-					
 
 					<div class="author-edit-remove-button-container">
-											<button>Edit</button>
-											<button>Remove</button>
+											<button class = "single-author-page-edit-button"data-author-id={{id}}>Edit</button>
+											<button class = "single-author-page-remove-button"data-author-id={{id}}>Remove</button>
+					</div>
+
+
+				<div class = "single-author-form-container">
+					<input class = "col-xs-12 single-author-form-first-name-input" type="text" name="first-name" value="{{first_name}}">
+
+					<input class = "col-xs-12 single-author-form-last-name-input" type="text" name="last-name" value="{{last_name}}">
+
+					<input class = "col-xs-12 single-author-form-portrait-input" type="text" name="portrait" value="{{portrait}}">
+
+
+					<textarea class = "col-xs-12 single-author-form-biography-input">{{biography}}</textarea>
+				
+					<button class ="single-author-form-submit">Sumbit Edit</button>				
 					</div>
 				</div>
+
 				
 			</script>
 			
